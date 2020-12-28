@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import img1 from "../assets/img1.jpg";
 import ServiceCard from "../Components/ServiceCard";
 import "./HomePage.css";
@@ -15,6 +15,13 @@ import img11 from "../assets/ligne-de-vie-verticale2-485x335.jpg";
 import img12 from "../assets/ligne-de-vie3-485x335.png";
 
 import img13 from "../assets/hestia-1541522538-300x225.jpg";
+import img14 from "../assets/rope-brake-1541784296.jpg";
+import img15 from "../assets/rope-4-red-1541613358-600x450.jpg";
+import img16 from "../assets/kitsdebaseplateforme-300x225.png";
+import img17 from "../assets/Casque3-300x225.png";
+import img18 from "../assets/positionnement-600x450.jpg";
+import img19 from "../assets/temporary-1542103611-600x450.jpg";
+import img20 from "../assets/crane-1542216922-600x450.jpg";
 import ProjectCard from "../Components/ProjectCard";
 import PoductCard from "../Components/PoductCard";
 const HomePage = () => {
@@ -179,15 +186,15 @@ const HomePage = () => {
       </div>
       <div className="part7">
         <PoductCard link="/" img={img13} title="BIA" />
-        <PoductCard link="/" img={img13} title="BIA" />
-        <PoductCard link="/" img={img13} title="BIA" />
-        <PoductCard link="/" img={img13} title="BIA" />
-        <PoductCard link="/" img={img13} title="BIA" />
+        <PoductCard link="/" img={img14} title="DESCENDEUR ANTI-PANIQUE" />
+        <PoductCard link="/" img={img15} title="CORDE STATIQUE" />
+        <PoductCard link="/" img={img16} title="KIT SEMI-PRO" />
+        <PoductCard link="/" img={img17} title="CASQUE DE SÉCURITÉ" />
 
-        <PoductCard link="/" img={img13} title="BIA" />
-        <PoductCard link="/" img={img13} title="BIA" />
+        <PoductCard link="/" img={img18} title="DISPOSITIF POSTIONNEMENT" />
+        <PoductCard link="/" img={img19} title="LIGNE DE VIE TEMPORAIRE" />
 
-        <PoductCard link="/" img={img13} title="BIA" />
+        <PoductCard link="/" img={img20} title="GRUE DE LEVAGE" />
       </div>
       <div className="part8">
         <div className="part8-title">

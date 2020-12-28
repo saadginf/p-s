@@ -33,6 +33,7 @@
   font-weight: 500;
   text-decoration: none;
 }
+
 .border-inOutSpread:before {
   border-top: 3px solid white;
 }
@@ -40,7 +41,12 @@
 .border-inOutSpread:after {
   border-bottom: 3px solid white;
 }
-
+@media only screen and (max-width: 700px) {
+  #span-verlay a {
+    font-size: 11px;
+    line-height: 2px;
+  }
+}
 .border-inOutSpread .ui-border-element:before {
   border-left: 3px solid white;
 }

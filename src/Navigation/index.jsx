@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faSortDown } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -13,7 +13,27 @@ import SideBar from "../SideBar";
 import RightBar from "../RightBar";
 import Dropdown from "./Dropdown";
 import DropdownProducts from "./DropdownProducts";
+import ScrollToTop from "../Components/ScrollToTop";
 const NavbarV2 = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [scrollTop, setScrollTop] = useState(false);
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 220) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+    if (offset > 500) {
+      setScrollTop(true);
+    } else {
+      setScrollTop(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
   const [isOpen, setisOpen] = useState(false);
   const [isOpenR, setisOpenR] = useState(false);
   const [dropdown, setDropdown] = useState(false);
@@ -35,7 +55,8 @@ const NavbarV2 = () => {
 
   return (
     <>
-      <NavContainer>
+      {scrollTop && <ScrollToTop />}
+      <NavContainer scrolled={scrolled}>
         <RightBar isOpen={isOpenR} toogle={toogleR} />
         <SideBar isOpen={isOpen} toogle={toogle} />
         <MobileIcon onClick={toogle}>

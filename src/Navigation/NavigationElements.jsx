@@ -4,10 +4,13 @@ export const NavContainer = styled.div`
   background: #ffc107;
   height: 55px;
   display: flex;
-  position: relative;
+  position: ${({ scrolled }) => (scrolled ? "fixed" : "relative")};
+  top: 0;
+  right: 0;
+  left: 0;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+
   z-index: 10;
   padding-left: 20px;
   max-with: 1100px;

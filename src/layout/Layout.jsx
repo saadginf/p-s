@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import "./layout.css";
-import Dropdown from "../Navigation/Dropdown";
+import ScrollToTop from "../Components/ScrollToTop";
 
 const Layout = ({ children }) => {
   return (
