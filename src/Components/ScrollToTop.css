@@ -13,3 +13,6 @@
   transition: 0.8s all ease;
   cursor: pointer;
 }
+.scroll-to-top:hover {
+  background-color: #ffc107;
+}
