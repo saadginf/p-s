@@ -13,7 +13,7 @@ export const NavContainer = styled.div`
 
   z-index: 10;
   padding-left: 20px;
-  max-with: 1100px;
+
   padding-right: 50px;
   @media (max-width: 960px) {
     transition: 0.8s all ease;
@@ -65,8 +65,6 @@ export const NavA = styled(LinkR)`
     color: white;
     text-decoration: none;
     border-bottom: 3px solid black;
-   
-}
   }
 `;
 export const SideBar = styled.div`

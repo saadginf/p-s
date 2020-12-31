@@ -54,7 +54,5 @@ export const SideBarLink = styled(LinkR)`
     text-decoration: none;
     border-bottom: 3px solid black;
     transition: 0.3s ease-in-out;
-
-}
   }
 `;

@@ -67,7 +67,7 @@ const NavbarV2 = () => {
             <NavA to="/">ACCUEIL</NavA>
           </NavItem>{" "}
           <NavItem>
-            <NavA>A PROPOS</NavA>
+            <NavA to="/apropos">A PROPOS</NavA>
           </NavItem>
           <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <NavA>
