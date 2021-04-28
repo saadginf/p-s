@@ -1,0 +1,50 @@
+.images-sservice {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.images-sservice img {
+  width: 370px;
+  height: 320px;
+  margin-bottom: 20px;
+}
+.description-sservice {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 0 40px;
+}
+.sservice-cara {
+  padding: 0 40px;
+  margin: 20px 0;
+}
+.sservice-cara-devis {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.sservice-cara-devis {
+  padding: 40px 0;
+}
+.sservice-compostion {
+  width: 100%;
+  padding: 0 40px;
+  margin-top: 40px;
+}
+.sservice-compostion img {
+  width: 100%;
+}
+.sservice-accessoires {
+  padding: 0 40px;
+  margin-top: 70px;
+  text-align: center;
+}
+.sservice-accessoires h2 {
+  margin-bottom: 50px;
+}
+.spinner-container {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

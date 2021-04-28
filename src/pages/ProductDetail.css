@@ -1,0 +1,14 @@
+.product-detail-container {
+  padding: 40px;
+}
+.product-detail-img {
+  width: 400px;
+  margin-bottom: 40px;
+  float: left;
+}
+.product-detail-title {
+  margin: 40px;
+}
+.clear-both {
+  clear: both;
+}

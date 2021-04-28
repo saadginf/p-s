@@ -70,14 +70,14 @@ const NavbarV2 = () => {
             <NavA to="/apropos">A PROPOS</NavA>
           </NavItem>
           <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-            <NavA>
+            <NavA to="/services">
               SERVICES{" "}
               <FontAwesomeIcon icon={faSortDown} size="lg" id="sort-icon" />
             </NavA>
             {dropdown && <Dropdown />}
           </NavItem>
           <NavItem onMouseEnter={onMouseEnteP} onMouseLeave={onMouseLeaveP}>
-            <NavA>
+            <NavA to="/product">
               PRODUITS
               <FontAwesomeIcon icon={faSortDown} size="lg" id="sort-icon" />
             </NavA>
@@ -85,11 +85,11 @@ const NavbarV2 = () => {
           </NavItem>
           <NavItem>
             {" "}
-            <NavA>PROJETS</NavA>
+            <NavA to="/projects">PROJETS</NavA>
           </NavItem>
           <NavItem>
             {" "}
-            <NavA>CONTACTEZ NOUS</NavA>
+            <NavA to="/contactus">CONTACTEZ NOUS</NavA>
           </NavItem>
           <NavItem>
             {" "}

@@ -39,6 +39,7 @@
   background-color: #001a35;
   transition: all 0.5;
 }
+
 .seemore-product a:hover {
   background-color: #ffcc00;
   padding: 12px;

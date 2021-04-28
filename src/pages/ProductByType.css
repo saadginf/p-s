@@ -1,0 +1,15 @@
+.products-by-type-container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.products-by-type-container p {
+  color: rgb(190, 190, 190);
+}
+.products-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

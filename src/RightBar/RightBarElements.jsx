@@ -31,8 +31,8 @@ export const ProjectsItem = styled(LinkR)`
   padding: 2px;
   outline: 0;
   display: inline-block;
-  max-with: 105px;
-  overflow: hidden
+  max-width: 105px;
+  overflow: hidden;
   transition: transform 0.5s ease;
 `;
 export const ProjectImage = styled.img`
