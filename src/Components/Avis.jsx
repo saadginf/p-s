@@ -2,7 +2,7 @@ import React from "react";
 import "./Avis.css";
 import user from "../assets/default-user.png";
 import Ratings from "react-ratings-declarative";
-const Avis = ({ name, rating }) => {
+const Avis = ({ name, rating, date, content }) => {
   return (
     <div className="avis-container">
       <img src={user} alt="user" />
@@ -22,8 +22,8 @@ const Avis = ({ name, rating }) => {
             <Ratings.Widget />
           </Ratings>
         </div>
-        <span>date</span>
-        <span>date</span>
+        <span>{date}</span>
+        <span>{content}</span>
       </div>
     </div>
   );

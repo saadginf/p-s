@@ -1,6 +1,5 @@
 .avis-container {
   display: flex;
-  border: 2px solid black;
   flex-wrap: nowrap;
   width: 60%;
   margin-bottom: 20px;

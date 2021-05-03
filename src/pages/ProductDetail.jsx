@@ -32,7 +32,12 @@ const ProductDetail = () => {
         <>
           {" "}
           <div className="product-detail-img">
-            <InnerImageZoom src={img13} />
+            <InnerImageZoom
+              src={
+                "https://protected-mountain-22516.herokuapp.com/" +
+                product.images[0]
+              }
+            />
           </div>
           <div className="product-detail-title">
             <h3>{product.name}</h3>
@@ -57,12 +62,26 @@ const ProductDetail = () => {
             </Tab>
             <Tab eventKey="profile" title="Avis">
               <p></p>
-              <Avis />
-              <Avis />
-              <Avis />
-              <Avis />
-              <p>Il n’y a pas encore d’avis.</p>
-              <p>Soyez le premier à laisser votre avis sur “IRIS”</p>
+              {product.avis.length ? (
+                product.avis.map((a) => (
+                  <Avis
+                    key={a._id}
+                    rating={a.rating}
+                    date={a.date}
+                    content={a.content}
+                    name={a.client}
+                  />
+                ))
+              ) : (
+                <>
+                  <p>Il n’y a pas encore d’avis.</p>
+                  <p>
+                    Soyez le premier à laisser votre avis sur{" "}
+                    <strong>{product.name}</strong>{" "}
+                  </p>
+                </>
+              )}
+
               <p>
                 Votre adresse de messagerie ne sera pas publiée. Les champs
                 obligatoires sont indiqués avec *
