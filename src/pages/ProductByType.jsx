@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
 import PoductCard from "../Components/PoductCard";
 import useApi from "../hooks/useApi";
 import productsApi from "../api/products";
@@ -24,7 +23,9 @@ const ProductByType = () => {
   }, []);
   return (
     <div className="products-by-type">
-      <p>{products.length} résultats affichés</p>
+      <p style={{ textAlign: "center", fontWeight: "bold", margin: "40px" }}>
+        {"(" + products.length + ")"} résultats affichés
+      </p>
       <div className="products-by-type-container">
         {products.length ? (
           products.map((p) => (
