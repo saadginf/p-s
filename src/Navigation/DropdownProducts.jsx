@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ProductsItems } from "./ProductsItems";
+import { ProductsItems } from "../data";
 import "./Dropdown.css";
 import { Link } from "react-router-dom";
 

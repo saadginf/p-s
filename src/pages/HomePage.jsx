@@ -1,29 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import img1 from "../assets/img1.jpg";
 import ServiceCard from "../Components/ServiceCard";
 import "./HomePage.css";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/verticale-1-370x400.jpg";
-import img4 from "../assets/pointancrage-370x400.jpg";
-import img5 from "../assets/GARDEDECORPS-370x400.png";
-import img6 from "../assets/training-3185170_640-370x400.jpg";
-import img7 from "../assets/audit-4189560_640-370x400.jpg";
 import img8 from "../assets/who-we-are.jpg";
-import img9 from "../assets/ligne-de-vie-485x335.jpg";
-import img10 from "../assets/ligne-de-vie-sur-r-485x335.jpg";
-import img11 from "../assets/ligne-de-vie-verticale2-485x335.jpg";
-import img12 from "../assets/ligne-de-vie3-485x335.png";
-
-import img13 from "../assets/hestia-1541522538-300x225.jpg";
-import img14 from "../assets/rope-brake-1541784296.jpg";
-import img15 from "../assets/rope-4-red-1541613358-600x450.jpg";
-import img16 from "../assets/kitsdebaseplateforme-300x225.png";
-import img17 from "../assets/Casque3-300x225.png";
-import img18 from "../assets/positionnement-600x450.jpg";
-import img19 from "../assets/temporary-1542103611-600x450.jpg";
-import img20 from "../assets/crane-1542216922-600x450.jpg";
 import ProjectCard from "../Components/ProjectCard";
 import PoductCard from "../Components/PoductCard";
+import { MenuItems, projects, HomeProducts } from "../data";
 const HomePage = () => {
   return (
     <>
@@ -46,45 +28,18 @@ const HomePage = () => {
           domaine de sécurité ANTICHUTE
         </p>
         <div className="sevices-cards">
-          <ServiceCard
-            title="Ligne de vie horizontale"
-            desc="Ligne de vie horizontale au MAROC Etude et installation de la ligne de vie horizontale au MAROC chez P&S "
-            href="/"
-            background={img2}
-          />
-          <ServiceCard
-            title="Ligne de vie verticale"
-            desc="Etude et installation des lignes de vie verticale  au MAROC chez P&S  solutions. La ligne de vie verticale est "
-            href="/"
-            background={img3}
-          />
-          <ServiceCard
-            title="Point d'ancrage"
-            desc="Etude et installation point d’ancrage  au MAROC chez P&S  solutions. Le point d’ancrage permet la mise en sécurité des"
-            href="/"
-            background={img4}
-          />
-          <ServiceCard
-            title="Protection collective"
-            desc="Etude et installation des structures de protection collective au MAROC chez P&S  solutions. La protection collective est une installation"
-            href="/"
-            background={img5}
-          />
-          <ServiceCard
-            title="Formation travail en hauteur"
-            desc="La formation travail en hauteur de P&S solutions est assurée pour toute personne appelée à réaliser des travaux en"
-            href="/"
-            background={img6}
-          />
-          <ServiceCard
-            title="Audit et conseil"
-            desc="Audit et conseil travaux en hauteur au MAROC chez P&S solutions. Afin de satisfaire les exigences de nos clients"
-            href="/"
-            background={img7}
-          />
+          {MenuItems.map((s, i) => (
+            <ServiceCard
+              key={i}
+              title={s.title}
+              desc={s.desc}
+              href={s.path}
+              background={s.img}
+            />
+          ))}
         </div>
         <div className="plus-svc-btn">
-          <a className="plus-svc-btn-a" href="/">
+          <a className="plus-svc-btn-a" href="/services">
             PLUS DE SERVICE
           </a>
         </div>
@@ -125,7 +80,7 @@ const HomePage = () => {
           </p>
         </div>
         <div>
-          <a id="part4-btn" href="/">
+          <a id="part4-btn" href="/contactus">
             OBTENIR UN DEVIS
           </a>
         </div>
@@ -150,34 +105,38 @@ const HomePage = () => {
         //</div>
       }
       <div className="part5">
-        <ProjectCard
-          img={img9}
-          link1="/"
-          link2="/"
-          titre="Ligne de vie horizontale"
-        />
-        <ProjectCard
-          img={img10}
-          link1="/"
-          link2="/"
-          titre="Ligne de vie horizontale sur acier"
-        />
-        <ProjectCard
-          img={img11}
-          link1="/"
-          link2="/"
-          titre="Ligne de vie verticale"
-        />
+        {projects.map((p, i) => {
+          if (i < 3) {
+            return (
+              <ProjectCard
+                img={p.img}
+                titre={p.title}
+                key={i}
+                link1={p.link}
+                link2={p.link}
+              />
+            );
+          } else {
+            return null;
+          }
+        })}
       </div>
       <div className="part5">
-        <ProjectCard
-          img={img12}
-          link1="/"
-          link2="/"
-          titre="Ligne de vie horizontale sur bois"
-        />
-        <ProjectCard img={img9} link1="/" link2="/" titre="Point d’ancrage" />
-        <ProjectCard img={img9} link1="/" link2="/" titre="Garde de corps" />
+        {projects.map((p, i) => {
+          if (i >= 3) {
+            return (
+              <ProjectCard
+                img={p.img}
+                titre={p.title}
+                key={i}
+                link1={p.link}
+                link2={p.link}
+              />
+            );
+          } else {
+            return null;
+          }
+        })}
       </div>
       <div className="part6">
         <a id="part6a" href="/">
@@ -185,16 +144,9 @@ const HomePage = () => {
         </a>
       </div>
       <div className="part7">
-        <PoductCard link="/" img={img13} title="BIA" />
-        <PoductCard link="/" img={img14} title="DESCENDEUR ANTI-PANIQUE" />
-        <PoductCard link="/" img={img15} title="CORDE STATIQUE" />
-        <PoductCard link="/" img={img16} title="KIT SEMI-PRO" />
-        <PoductCard link="/" img={img17} title="CASQUE DE SÉCURITÉ" />
-
-        <PoductCard link="/" img={img18} title="DISPOSITIF POSTIONNEMENT" />
-        <PoductCard link="/" img={img19} title="LIGNE DE VIE TEMPORAIRE" />
-
-        <PoductCard link="/" img={img20} title="GRUE DE LEVAGE" />
+        {HomeProducts.map((pr, i) => (
+          <PoductCard key={i} link={pr.link} img={pr.img} title={pr.title} />
+        ))}
       </div>
       <div className="part8">
         <div className="part8-title">

@@ -26,16 +26,16 @@ const Footer = () => {
             d’ancrage,formation travail en hauteur au maroc,audit et conseil
             …..)
             <div className="footericones">
-              <a href="#">
+              <a href="https://web.facebook.com/PS-solutions-110294210835103/?view_public_for=110294210835103&_rdc=1&_rdr">
                 <FontAwesomeIcon icon={faFacebook} size="lg" color="white" />
               </a>
-              <a href="#">
+              <a href="https://web.facebook.com/PS-solutions-110294210835103/?view_public_for=110294210835103&_rdc=1&_rdr">
                 <FontAwesomeIcon icon={faLinkedin} size="lg" color="white" />
               </a>
-              <a href="#">
+              <a href="https://web.facebook.com/PS-solutions-110294210835103/?view_public_for=110294210835103&_rdc=1&_rdr">
                 <FontAwesomeIcon icon={faTwitter} size="lg" color="white" />
               </a>
-              <a href="#">
+              <a href="https://web.facebook.com/PS-solutions-110294210835103/?view_public_for=110294210835103&_rdc=1&_rdr">
                 <FontAwesomeIcon icon={faYoutube} size="lg" color="white" />
               </a>
             </div>

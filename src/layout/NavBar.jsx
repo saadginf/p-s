@@ -12,9 +12,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import InfoItem from "./InfoItem";
-import Bar from "./Bar";
 import NavbarV2 from "../Navigation";
-import SideBarV1 from "../SideBar";
 
 const NavBar = () => {
   return (

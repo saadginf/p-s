@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Tab, Tabs } from "react-bootstrap";
 import InnerImageZoom from "react-inner-image-zoom";
-import img13 from "../assets/iris-1541524403.jpg";
 import Avis from "../Components/Avis";
 import FormAvis from "../Components/FormAvis";
 import FormDevis from "../Components/FormDevis";

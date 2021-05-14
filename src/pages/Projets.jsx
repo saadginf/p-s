@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "../Components/ProjectCard";
-import img9 from "../assets/ligne-de-vie-485x335.jpg";
-import img10 from "../assets/ligne-de-vie-sur-r-485x335.jpg";
-import img11 from "../assets/ligne-de-vie-verticale2-485x335.jpg";
-import img12 from "../assets/ligne-de-vie3-485x335.png";
+
 import "./Projet.css";
+import ClipLoader from "react-spinners/ClipLoader";
 
 import useApi from "../hooks/useApi";
 import ProjectApi from "../api/projects";
@@ -34,24 +32,37 @@ const Projets = () => {
       </div>
 
       <div className="projects-page-container">
-        {projects.length
-          ? projects.map((p, i) => {
-              if (i < 3) {
-                return (
-                  <ProjectCard
-                    img={
-                      "https://protected-mountain-22516.herokuapp.com/" +
-                      p.images[0]
-                    }
-                    titre={p.name}
-                    key={p._id}
-                    link1={"/projects/" + p._id}
-                    link2={"/projects/" + p._id}
-                  />
-                );
-              }
-            })
-          : null}
+        {projects.length ? (
+          projects.map((p, i) => {
+            if (i < 3) {
+              return (
+                <ProjectCard
+                  img={
+                    "https://protected-mountain-22516.herokuapp.com/" +
+                    p.images[0]
+                  }
+                  titre={p.name}
+                  key={p._id}
+                  link1={"/projects/" + p._id}
+                  link2={"/projects/" + p._id}
+                />
+              );
+            } else {
+              return null;
+            }
+          })
+        ) : (
+          <div
+            className="spinner-container"
+            style={{
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <ClipLoader size={150} color="#ffc107" />
+          </div>
+        )}
       </div>
       <div className="projects-page-container2">
         {projects.length
@@ -69,6 +80,8 @@ const Projets = () => {
                     link2={"/projects/" + p._id}
                   />
                 );
+              } else {
+                return null;
               }
             })
           : null}

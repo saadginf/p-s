@@ -49,7 +49,7 @@ const SserviceDesc = () => {
             {service.images.map((s) => (
               <img
                 src={"https://protected-mountain-22516.herokuapp.com/" + s}
-                alt="image"
+                alt="serviceimage"
               />
             ))}
           </div>

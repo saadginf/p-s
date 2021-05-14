@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import img13 from "../assets/hestia-1541522538-300x225.jpg";
+
 import PoductCard from "../Components/PoductCard";
 import useApi from "../hooks/useApi";
 import productsApi from "../api/products";
